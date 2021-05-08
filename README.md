@@ -7,14 +7,16 @@ In this project, double-jointed arms can move to target locations. A reward of +
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 The version of the environment contains 20 identical agents, each with its own copy of the environment. This allows for distributed learning. 
 
+The environment is considered solved when the average reward over 100 episodes is at least +30.
+
 ## Installation
 In order to run these scripts you will require
 1. Follow instructions from this [link](https://github.com/udacity/deep-reinforcement-learning#dependencies) to ensure all dependencies are installed. 
 2. Ensure that you execute *_cell 1_* of the `Naviagation.ipynb` notebook. `pip -q install ./python`.
 
 
-## Setup
-# Download the Unity Environment
+# Setup
+## Download the Unity Environment
 For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
 
 This Version: Containing Twenty (20) Agents
