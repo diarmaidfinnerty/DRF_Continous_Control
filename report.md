@@ -8,6 +8,21 @@ For details on the nature of the environment see README.md
 
 The agent was trained using a `Deep Deterministic Policy Gradient` model using an `Actor-Critic` methodology. This was sufficient to solve the environment in 122 episodes meaning that the  average score for each episode (where the average is over all 20 agents) is over 30.
 
+## Model Architecture
+
+The `DDPG` consists of two elements, the `Actor` and the `Critic`. These two have very similar architectures. 
+
+`Actor`
+The actor consists of 3 layers. 
+* 2 fully connected layers with `ReLU` activation functions. 
+* 1 fully connected output layer with a `Tanh` activation function. 
+
+`Critic`
+The critic has a similiar architecture to the actor. 
+* 1 fully connected layer with a `ReLU` activation function. 
+* The output of the 1st layer is concatenated with the `action` passed into the forward function. 
+* A second fully connected layer with a `ReLU` activation function.
+* A final fully concted output layer without an activation function
 
 ### Hyper Parameters  
 
